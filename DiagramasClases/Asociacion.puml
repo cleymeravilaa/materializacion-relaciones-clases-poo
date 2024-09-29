@@ -1,0 +1,21 @@
+@startuml Asociacion
+
+class Equipo {
+    - jugadores : ArrayList<Jugador>
+    + agregarJugador(jugador : Jugador) : void
+    + buscarJugador(nombre : String) : Jugador
+    + eliminarJugador(jugador : Jugador) : void
+    + eliminarJugadores() : void
+}
+
+class Jugador {
+    - nombre : String
+    - equipo : Equipo
+    + getNombre() : String
+    + getEquipo() : Equipo
+}
+
+'Representacion asociacion en UML
+Equipo "1" <--> "*" Jugador : Tiene >
+Jugador "*" <--> "1" Equipo : Pertenece >
+@enduml

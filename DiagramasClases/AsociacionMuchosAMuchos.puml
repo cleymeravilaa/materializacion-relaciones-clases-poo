@@ -1,0 +1,24 @@
+@startuml AsociacionMuchosAMuchos
+
+class Asignacion {
+    - empleado : Empleado
+    - proyecto : Proyecto
+    + getEmpleado() : Empleado
+    + getProyecto() : Proyecto
+    + mostrarAsignacion() : void
+}
+
+class Empleado {
+    - nombre : String
+    + getNombre() : String
+}
+
+class Proyecto {
+    - nombre : String
+    + getNombre() : String
+}
+
+'Representacion asociacion muchos a muchos en UML
+
+Asignacion "*" --> "1" Proyecto
+Asignacion "*" -->"1" Empleado

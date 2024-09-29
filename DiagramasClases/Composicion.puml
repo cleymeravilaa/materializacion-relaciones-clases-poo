@@ -1,0 +1,17 @@
+@startuml Composicion
+
+class Computadora {
+    - procesador : Procesador
+    + cambiarProcesador(procesador : Procesador) : void
+    + ejecutar() : void
+    + eliminarProcesador() : void
+}
+
+class Procesador {
+    - modelo : String 
+    + ejecutar() : void
+}
+
+'Representacion composicion en UML
+Computadora *-- "1" Procesador : Utiliza
+@enduml

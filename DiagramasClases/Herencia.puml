@@ -1,0 +1,19 @@
+@startuml Herencia
+
+class Animal {
+    # nombre : String
+    # edad : int 
+    + getNombre() : String
+    + getEdad() : int
+    + hacerZonido() : void 
+}
+
+class Perro {
+    - color : String
+    + getColor() : String
+    + hacerZonido() : void
+}
+
+' Representar herencia en UML
+Animal <|-- Perro
+@enduml

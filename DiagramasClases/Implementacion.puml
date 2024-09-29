@@ -1,0 +1,13 @@
+@startuml Implementacion
+
+interface Nadador {
+    + nadar() : void
+}
+
+class Delfin {
+    + nadar() : void
+    + hacerZonido() : void
+}
+
+Nadador <|.. Delfin
+@enduml

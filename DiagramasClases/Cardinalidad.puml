@@ -1,0 +1,17 @@
+@startuml Cardinalidad
+
+class Biblioteca {
+    - libros : List<Libro>
+    + agregarLibro(Libro libro) : void
+    + mostrarLibros() : void
+}
+
+class Libro {
+    - nombre : String
+    + getNombre() : String      
+}
+
+'Representacion cardinalidad en UML
+
+Biblioteca "1" --o "*" Libro: contiene >
+Libro "*" -- "1" Biblioteca: pertenece a >

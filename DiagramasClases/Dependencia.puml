@@ -1,0 +1,14 @@
+@startuml Dependencia
+
+class Documento {
+    - contenido : String
+    + getTitulo() : String
+}
+
+class Impresora {
+    + imprimir(doc : Documento) : void
+}
+
+' Representar dependencia en UML
+Impresora ..> Documento: Utiliza
+@enduml

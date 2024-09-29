@@ -1,0 +1,19 @@
+@startuml Agregacion
+
+class Aula {
+    - carrera : String
+    - estudiantes : ArrayList<Estudiante>
+    + iniciarClase() : void
+    + getCarrera() : String
+}
+
+class Estudiante {
+    - nombre : String
+    - edad : int
+    + estudiar() : void
+    + getNombre() : String
+    + getEdad() : int
+}
+
+'Representar Agregacion en UML
+Aula o-- "0..*" Estudiante : tiene >
